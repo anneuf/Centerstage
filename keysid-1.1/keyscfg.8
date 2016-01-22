@@ -1,0 +1,35 @@
+.TH keyscfg 8 "October 2005"
+.SH NAME
+keyscfg \- keysid configuration program
+.SH SYNOPSIS
+.B keyscfg
+<\fB\-n keynumber\fR> [\fB\-f config_file\fR] [\fB\-d device\fR]
+.SH DESCRIPTION
+keyscfg is the configuration program for the keysid daemon,
+it generates a configuration file, then you should edit that file by hand
+to make the daemon work proprely. See the documentation provided with
+the package if you don't know how to configure it and for futher information.
+.SH OPTIONS
+.TP
+\fB-n\fP
+It's required, it stands for the number of keys you want to intercept
+.TP
+\fB-f\fP
+It's the path to the output configuration file, default is
+`/etc/keysid/keysid.conf'
+.TP
+\fB-d\fP
+It's the device you want to read from. The default is
+`/dev/input/event0', you shouln't use this option unless you know
+what you are doing.
+.SH FILES
+/etc/keysid/keysid.conf
+.SH KNOWN BUGS
+You shouldn't press any key for a couple of milliseconds after you start
+the program, otherwise it couldn't get your input in the right way.
+.SH SEE ALSO
+keysid(8)
+.SH AUTHOR
+.na
+.nf
+Daniele Sempione <scrows at oziosi.org>

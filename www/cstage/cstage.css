@@ -1,0 +1,194 @@
+﻿<style type="text/css">
+body { margin:0; padding:0; width:1920px; height:1080px; }
+div { border:2px solid #fff; }
+
+#main {
+ position:fixed;
+ top:0px;
+ left:0px;
+ width:1500px;
+ height:1080px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:42px;
+ text-align:left;
+ color:white;
+ }
+
+#main_edit {
+ /*position:fixed;*/
+ top:0px;
+ left:800px;
+ width:768px;
+ height:553px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:21px;
+ text-align:left;
+ color:white;
+ }
+
+#set {
+ position:fixed;
+ top:0px;
+ left:1500px;
+ width:420px;
+ height:80px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:34px;
+ text-align:center;
+ color:green;
+ }
+
+#setlist {
+ position:fixed;
+ top:80px;
+ left:1500px;
+ width:420px;
+ height:800px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:34px;
+ text-align:center;
+ color:white;
+ }
+
+#time {
+ position:fixed;
+ top:880px;
+ left:1500px;
+ width:420px;
+ height:100px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:72px;
+ text-align:center;
+ color:aqua;
+ }
+
+#key {
+ position:fixed;
+ top:980px;
+ left:1600px;
+ width:140px;
+ height:100px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:72px;
+ text-align:center;
+ color:yellow;
+ }
+
+#bpm {
+ position:fixed;
+ top:980px;
+ left:1740px;
+ width:180px;
+ height:100px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:72px;
+ text-align:center;
+ color:red;
+ }
+
+#page {
+ position:fixed;
+ top:980px;
+ left:1500px;
+ width:100px;
+ height:100px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:60px;
+ text-align:center;
+ color:fuchsia;
+ }
+
+.inactive {
+ color:white;
+ border:0px;
+ }
+.active {
+ color:yellow;
+ border:1px solid red;
+ background-color:red;
+ }
+
+.tiny_inactive {
+ color:white;
+ border:1px solid midnightblue;
+ background-color: midnightblue;
+ font-family:"Arial";
+ font-size:100px;
+ text-align:center;
+ }
+.tiny_active {
+ color:yellow;
+ border:1px solid red;
+ background-color:red;
+ font-family:"Arial";
+ font-size:100px;
+ text-align:center;}
+
+.selectbox {
+	padding: 50px;
+	box-shadow: 15px 15px 5px 5px #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 50px;
+	border: thick ridge #FFFF00;
+	background-color: #707070;
+	position: static;
+/*	width: 80%;
+	height: 768px;
+	margin-top: 156px;
+	margin-left: 448px;*/
+	font-size: x-large;
+	color: #00FF00;
+}
+.h1_noshow {
+	font-size: xx-large;
+	color: #FFFF00;
+	font-style: italic;
+	text-align: center;
+}
+.tablediv_noshow {
+	border-style: none;
+	width: 100%;
+	height: 500px;
+	overflow: auto;
+	left: 12px;
+	position: relative;
+	border-collapse: collapse;
+}
+.table_noshow {
+	border-style: outset;
+	border-color: #FFFF00;
+	caption-side: top;
+	empty-cells: show;
+	width: 100%;
+	text-align: center;
+}
+.body_noshow {
+	background-color: #000000;
+	background-image: url('cstage_bg.jpg');
+}
+a:link {
+	color: #00FF00;
+}
+
+a:visited {
+	color: #00FF00;
+}
+a:focus {
+	color: #70FF70;
+}
+a:hover {
+	color: #70FF70;
+}
+a:active {
+	color: #00FF00;
+}
+
+</style>

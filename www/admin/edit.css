@@ -1,0 +1,128 @@
+﻿<style type="text/css">
+body { margin:0; padding:0; width:1920px; height:1080px; }
+
+#main {
+ position:fixed;
+ top:0px;
+ left:0px;
+ width:1500px;
+ height:1080px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:42px;
+ text-align:left;
+ color:white;
+ }
+
+#main_edit {
+ /*position:fixed;*/
+ top:0px;
+ left:800px;
+ width:768px;
+ height:553px;
+ background-color:#000;
+ font-family:"Arial";
+ font-size:21px;
+ text-align:left;
+ color:white;
+ }
+
+#edit_header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    font-family:"Arial";
+    font-size:21px;
+    padding:5px;
+}
+#edit_nav {
+    line-height:30px;
+    background-color:#0707ff;
+    color:black;
+    height:400px;
+    width:100px;
+    font-family:"Arial";
+    float:left;
+    padding:5px; 
+}
+#edit_main {
+    width:350px;
+    float:left;
+    font-family:"Arial";
+    padding:10px;
+    color: yellow; 
+}
+#edit_footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    font-family:"Arial";
+    padding:5px; 
+}
+
+#edit_table {
+
+    border-collapse: collapse;
+    border: 1px solid aqua;
+    font-size: 21px;
+
+}
+
+#footer_table {
+
+    border: 1px solid black;
+
+}
+
+th {
+    border: 1px solid aqua;
+    color: yellow;
+    text-align: center;
+    
+}
+td {
+    border: 1px solid aqua;
+    color: yellow;
+    text-align: center;
+}
+
+h3 {
+
+  color: yellow;
+  font-size: 21px;
+
+}
+
+
+.inactive {
+ color:white;
+ border:0px;
+ }
+.active {
+ color:yellow;
+ border:1px solid red;
+ background-color:red;
+ }
+.body_noshow {
+        background-color: #303030;
+}
+
+a:link {
+	color: yellow;
+}
+
+a:visited {
+	color: yellow;
+}
+a:focus {
+	color: #70FF70;
+}
+a:hover {
+	color: #FF7070;
+}
+a:active {
+	color: yellow;
+}
+
+</style>
