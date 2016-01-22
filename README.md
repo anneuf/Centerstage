@@ -11,3 +11,4 @@ Initial ToDos:
     b) Enable i2c extension
     c) Set locale
  3) Run install.sh with root privileges
+ 4) Set Boot to shell
