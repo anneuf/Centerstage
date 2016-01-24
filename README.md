@@ -7,8 +7,9 @@ Initial ToDos:
 
  1) Setup Raspian using Noobs
  2) Run raspi-config
-    a) Enable Overscan
+    a) Disable Overscan
     b) Enable i2c extension
     c) Set locale
- 3) Run install.sh with root privileges
- 4) Set Boot to shell
+    d) Set Boot to console
+ 3) Enter WPA-credentials in conf/install_wpa.sh
+ 4) Run install.sh with root privileges
