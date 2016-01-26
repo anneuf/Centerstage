@@ -24,12 +24,12 @@ Centerstage Edit Set
 
 $db = new SQLite3("../db/Centerstage.sqlite3");
 
-$sql1 = "DELETE FROM sets WHERE idshow=" . $_POST["showid"] . " AND idset=" . $_POST["setid"];
-$results1 = $db->query($sql1);
 
 switch ($_POST["action"]) {
 
   case "edit":
+    $sql1 = "DELETE FROM sets WHERE idshow=" . $_POST["showid"] . " AND idset=" . $_POST["setid"];
+    $results1 = $db->query($sql1);
     $pos = 1;
     for ($i = 1; $i <= $_POST["maxpos"]; $i++)
     {

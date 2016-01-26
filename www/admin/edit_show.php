@@ -62,6 +62,8 @@ echo "<input type=\"submit\" value=\"Submit\">";
 <col width="150">
 <col width="200">
 <col width="150">
+<col width="200">
+<col width="150">
 </colgroup>
 <tr id="footer_table">
 <td id="footer_table">
@@ -84,6 +86,20 @@ echo "<a href=\"edit_set.php?showid=" . $idshow . "&setid=" . $newset . "\">Add 
 </td>
 <td id="footer_table">
 <?php
+
+$sql4 = "SELECT DISTINCT idset FROM sets WHERE idshow=" . $idshow . " ORDER BY idset";
+$results4 = $db->query($sql4);
+while ($row4 = $results4->fetchArray())
+  {
+
+    echo "<a href=\"del_set.php?showid=" . $idshow . "&setid=" . $row4["idset"] . "\">Delete Set " . $row4["idset"] . "</a><br>";
+  }
+?>
+</td>
+<td id="footer_table">
+</td>
+<td id="footer_table">
+<?php
 $lim_l = 1000 * $idshow;
 $lim_h = 1000 * ($idshow +1 );
 $sql3 = "SELECT idsong,name FROM song WHERE idsong>" . $lim_l . " AND idsong<" . $lim_h . " ORDER BY idsong";
@@ -92,11 +108,11 @@ $newannounce=(1000*$idshow)+1;
 while ($row3 = $results3->fetchArray())
   {
 
-    echo "<a href=\"edit_page.php?song=" . $row3["idsong"] . "&page=1\">Edit " . $row3["name"] . "</a><br>"; 
+    echo "<a href=\"edit_announce.php?song=" . $row3["idsong"] . "&page=1&newannounce=0\">Edit " . $row3["name"] . "</a><br>"; 
     $newannounce = $row3["idsong"] + 1;
   }
 
-echo "<a href=\"edit_page.php?song=" . $newannounce . "&page=1\">Add Announcement</a> ";
+echo "<a href=\"edit_announce.php?song=" . $newannounce . "&page=1&newannounce=1\">Add Announcement</a> ";
 ?>
 </td>
 </tr>

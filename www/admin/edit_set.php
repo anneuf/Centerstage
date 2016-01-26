@@ -23,7 +23,7 @@ $idset = $_GET["setid"];
 $idshow = $_GET["showid"];
 $lim_l = $idshow*1000;
 $lim_h = ($idshow+1)*1000;
-
+$maxpos = 0;
 $db = new SQLite3("../db/Centerstage.sqlite3");
 
 $sql1 = "SELECT position,song FROM sets WHERE idset=" . $idset . " AND idshow=" . $idshow . " ORDER BY position";
