@@ -1,5 +1,5 @@
-actual_pointer=$(sqlite3 /var/www/Centerstage.sqlite3 "select pointer.pointer from pointer")
-eof=$(sqlite3 /var/www/Centerstage.sqlite3 "select eof from running_show where idrunning_show=$actual_pointer")
+actual_pointer=$(sqlite3 /var/www/html/db/Centerstage.sqlite3 "select pointer.pointer from pointer")
+eof=$(sqlite3 /var/www/html/db/Centerstage.sqlite3 "select eof from running_show where idrunning_show=$actual_pointer")
 if [[ $eof != "1" ]]; then
-sqlite3 /var/www/Centerstage.sqlite3 "update pointer set pointer = pointer + 1"
+sqlite3 /var/www/html/db/Centerstage.sqlite3 "update pointer set pointer = pointer + 1"
 fi
