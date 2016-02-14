@@ -1,0 +1,8 @@
+[Unit]
+Description=read_key
+
+[Service]
+ExecStart=/usr/local/sbin/read_key.py
+
+[Install]
+WantedBy=multi-user.target
