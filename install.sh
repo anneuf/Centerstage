@@ -29,7 +29,8 @@ echo
 echo "####  Install Applications  ####"
 echo
 
-apt-get -y install midori matchbox-window-manager xterm apache2 php5 sqlite3 php5-sqlite x11-xserver-utils unclutter i2c-tools
+apt-get -y install midori matchbox-window-manager xterm apache2 php5 sqlite3 php5-sqlite x11-xserver-utils unclutter i2c-tools python-dev python-pip
+pip install evdev
 
 echo 
 echo "<--Done-->"
@@ -63,6 +64,7 @@ echo "####  Configure Boot  ####"
 echo
 
 cat conf/rc.local > /etc/rc.local
+
 
 echo 
 echo "<--Done-->"
@@ -106,16 +108,11 @@ echo
 echo "####  Compile&Install Keyboard-Daemon  ####"
 echo
 
-cd keysid-1.1
-
-./configure --prefix=/usr
-make
-make install
-
-cd ..
-
-mkdir /etc/keysid
-cp conf/keysid.conf /etc/keysid/keysid.conf
+copy conf/read_key.py /usr/local/sbin/
+chmod 777 /usr/local/sbin/read_key.py
+copy conf/readkey.service /lib/systemd/system/
+chmod 644 /lib/systemd/system/readkey.service
+systemctl enable readkey
 
 echo 
 echo "<--Done-->"
