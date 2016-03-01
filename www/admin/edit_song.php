@@ -83,6 +83,7 @@ echo "<input type=\"submit\" value=\"Submit\">";
 
 $sql2 = "SELECT page FROM pages WHERE idsong=" . $idsong . " ORDER BY page";
 $results2 = $db->query($sql2);
+$newpage = 1;
 while ($row2 = $results2->fetchArray())
   {
 
