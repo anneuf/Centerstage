@@ -69,7 +69,7 @@ chmod 644 /lib/systemd/systemmyscript.service
 chmod 755 /root/startup.sh
 systemctl daemon-reload
 systemctl enable myscript.service
-systemctl enable openssh.service
+systemctl enable ssh.service
 
 echo 
 echo "<--Done-->"
@@ -113,9 +113,9 @@ echo
 echo "####  Compile&Install Keyboard-Daemon  ####"
 echo
 
-copy conf/read_key.py /usr/local/sbin/
+cp conf/read_key.py /usr/local/sbin/
 chmod 777 /usr/local/sbin/read_key.py
-copy conf/readkey.service /lib/systemd/system/
+cp conf/readkey.service /lib/systemd/system/
 chmod 644 /lib/systemd/system/readkey.service
 systemctl enable readkey
 
