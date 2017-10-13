@@ -29,7 +29,7 @@ echo
 echo "####  Install Applications  ####"
 echo
 
-apt-get -y install midori matchbox-window-manager xterm apache2 php5 sqlite3 php5-sqlite x11-xserver-utils unclutter i2c-tools python-dev python-pip
+apt-get -y install midori matchbox-window-manager xterm apache2 php5 sqlite3 php5-sqlite x11-xserver-utils unclutter i2c-tools python-dev python-pip xinit ssh openssh-server
 pip install evdev
 
 echo 
@@ -63,8 +63,13 @@ echo
 echo "####  Configure Boot  ####"
 echo
 
-cat conf/rc.local > /etc/rc.local
-
+cat conf/myscript.service > /lib/systemd/system/myscript.service
+cat conf/startup.sh > /root/startup.sh
+chmod 644 /lib/systemd/systemmyscript.service
+chmod 755 /root/startup.sh
+systemctl daemon-reload
+systemctl enable myscript.service
+systemctl enable openssh.service
 
 echo 
 echo "<--Done-->"
